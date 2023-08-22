@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordcount</title>
+    <style>
+        body{
+            background-image: url(Assert/jp.jpg);
+            margin: 400px;
+            
+        }
+    </style>
+    </head>
+<body>
+    
+    <script>
+         function wordcount() {
+            let text = document.getElementById("a").value;
+            let numWords = 0;
+            for (var i = 0; i < text.length; i++) {
+                var currentCharacter = text[i];
+                if (currentCharacter == " ") {
+                    numWords += 1;
+                }
+            }
+            numWords += 1;
+            document.getElementById("show").innerHTML = numWords;
+            }
+            
+    </script>
+             
+    <textarea name="words" id="a" cols="100" rows="10" >Enter the words</textarea><br>
+    <button onclick="wordcount()" id="show">Wordcount</button>
+    
+</body>
+</html>
